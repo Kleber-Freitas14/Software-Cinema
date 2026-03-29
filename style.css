@@ -1,5 +1,9 @@
+/*CONFIGURAÇÃO DO INDEX*/
 body {
-    background-color: #f8f9fa;
+    min-height: 100vh;
+    background: url("./img/capa.avif") no-repeat center center;
+    background-size: cover;
+
 }
 
 .navbar {
@@ -7,11 +11,94 @@ body {
 }
 
 .container {
-    background: white;
+    background: rgba(182, 179, 179, 0.7);
     padding: 20px;
     border-radius: 10px;
+    max-width: 900px;
 }
 
 h2 {
     font-weight: bold;
+    color: rgb(240, 250, 219);
+    font-size: 3rem;
+    text-align: center;
 }
+
+p {
+    font-weight: bold;
+    color: rgba(83, 94, 12, 0.9);
+    font-size: 25px;
+    text-align: center;
+}
+
+/*CONFIGURAÇÃO DO CADASTRO FILME*/
+body.cadastro-filme {
+    min-height: 100vh;
+    background: url("./img/capaCadFilme.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+body.cadastro-filme button {
+    background-color: rgba(57, 144, 168, 0.5);
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: rgb(37, 30, 30);
+    border: none;
+}
+
+/*CONFIGURAÇÃO DO CADASTRO SALAS*/
+body.cadastro-salas {
+    min-height: 100vh;
+    background: url("./img/capaCadastroSalas.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+body.cadastro-salas button {
+    background-color: rgba(57, 144, 168, 0.5);
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: rgb(37, 30, 30);
+    border: none;
+}
+
+/*CONFIGURAÇÃO DO CADASTRO SALAS*/
+body.cadastro-salas .container {
+    background: rgba(182, 179, 179, 0.7);
+    padding: 40px 20px;
+    border-radius: 10px;
+    width: 600px;       /* largura fixa maior que os inputs */
+    margin: 50px auto;  /* centraliza horizontal */
+    position: relative; /* apenas para consistência */
+}
+
+/* Inputs, selects e textarea centralizados */
+body.cadastro-salas input,
+body.cadastro-salas select,
+body.cadastro-salas textarea {
+    width: 500px;       /* largura fixa */
+    display: block;     /* necessário para margin auto funcionar */
+    margin: 10px auto;  /* centraliza horizontal */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+}
+
+/* Botão centralizado */
+body.cadastro-salas button {
+    width: 200px;
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(57, 144, 168, 0.5);
+    color: #251e1e;
+    cursor: pointer;
+}
+
+/*CONFIGURAÇÃO DO CADASTRO SESSÕES*/    
