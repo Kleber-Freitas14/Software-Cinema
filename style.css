@@ -101,4 +101,91 @@ body.cadastro-salas button {
     cursor: pointer;
 }
 
-/*CONFIGURAÇÃO DO CADASTRO SESSÕES*/    
+/*CONFIGURAÇÃO DO CADASTRO SESSÕES*/ 
+body.cadastro-sessoes{
+        min-height: 100vh;
+    background: url("./img/capaCadastroSessoes.png") no-repeat center center;
+    background-size: cover;
+}
+
+
+body.cadastro-sessoes .container {
+    background: rgba(182, 179, 179, 0.7);
+    padding: 40px 20px;
+    border-radius: 10px;
+    width: 600px;       /* largura fixa maior que os inputs */
+    margin: 50px auto;  /* centraliza horizontal */
+    position: relative; /* apenas para consistência */
+}
+
+body.cadastro-sessoes input,
+body.cadastro-sessoes select {
+    width: 500px;       /* largura fixa */
+    display: block;     /* necessário para margin auto funcionar */
+    margin: 10px auto;  /* centraliza horizontal */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+}
+
+body.cadastro-sessoes button {
+    width: 200px;
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(57, 144, 168, 0.5);
+    color: #251e1e;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+
+/*CONFIGURAÇÃO DE SESSÕES DISPONÍVEIS*/ 
+body.sessoes-disponiveis {
+    min-height: 100vh;
+    background: url("./img/capaSessaoDisp.webp") no-repeat center center;
+    background-size: cover;
+}
+
+/*CONFIGURAÇÃO DE VENDA DE INGRESSOS*/ 
+body.venda-ingressos{
+        min-height: 100vh;
+    background: url("./img/capaVendaIng.webp") no-repeat center center;
+    background-size: cover;
+}
+
+body.venda-ingressos .container {
+    background: rgba(182, 179, 179, 0.7);
+    padding: 40px 20px;
+    border-radius: 10px;
+    width: 600px;       /* largura fixa maior que os inputs */
+    margin: 50px auto;  /* centraliza horizontal */
+    position: relative; /* apenas para consistência */
+}
+
+body.venda-ingressos input,
+body.venda-ingressos select {
+    width: 500px;       /* largura fixa */
+    display: block;     /* necessário para margin auto funcionar */
+    margin: 10px auto;  /* centraliza horizontal */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+}
+
+body.venda-ingressos button {
+    width: 200px;
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(57, 144, 168, 0.5);
+    color: #251e1e;
+    cursor: pointer;
+    box-sizing: border-box;
+}
