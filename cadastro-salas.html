@@ -10,15 +10,16 @@
 </head>
 
 <body>
-    <!--INTRODUÇÃO DE BARRA DE MENU, IMAGEM E TEXTO-->
+
+    <!-- MENU -->
     <nav class="navbar navbar-expand-lg bg-black border-bottom border-body" data-bs-theme="dark">
         <div class="container-fluid">
 
-            <a href="" class="navbar-brand">
+            <a href="#" class="navbar-brand">
                 <img src="./img/cinema.svg" alt="" class="d-inline-block align-text-top">
                 SOFTWARE-CINEMA
             </a>
-            <!-- INTRODUÇÃO DSO TÓPICOS NO MENU SANDUICHE-->
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -45,38 +46,38 @@
 
         </div>
     </nav>
-    <div class="container">
-        <h2>Cadastros de Salas</h2>
+
+    <!-- CONTEÚDO -->
+    <div class="container mt-4">
+        <h2>Cadastro de Salas</h2>
         <hr>
 
-        <div class="container">
-            <div class="row">
-                <div class="col"></div>
-                <div class="col">
-                    <div class="sala">
-                        <input id="nomeSala" class="form-control" placeholder="Nome da Sala"><br>
-                    </div>
-                    <div class="sala">
-                        <input id="capacidade" type="number" class="form-control" placeholder="Capacidade da Sala"><br>
-                    </div>
-                    <div class="sala">
-                        <select id="tipoSala" class="form-control" placeholder="Selecione o Tipo da Sala"><br>
-                            <option>2D</option>
-                            <option>3D</option>
-                            <option>IMAX</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col"></div>
-            </div>
-            <button onabort="salvarSala()" class="btn btn-primary">Salvar Sala</button>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
 
+                <input id="nomeSala" class="form-control" placeholder="Nome da Sala"><br>
+
+                <input id="capacidade" type="number" class="form-control" placeholder="Capacidade da Sala"><br>
+
+                <select id="tipoSala" class="form-control">
+                    <option value="">Selecione o Tipo da Sala</option>
+                    <option value="2D">2D</option>
+                    <option value="3D">3D</option>
+                    <option value="IMAX">IMAX</option>
+                </select><br>
+
+                <button type="button" onclick="salvarSala()" class="btn btn-primary w-100">
+                    Salvar Sala
+                </button>
+
+            </div>
         </div>
     </div>
 
-
-    </div>
-    <script src="js/script.js"></script>
-
+    <!-- SCRIPTS -->
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+</html>

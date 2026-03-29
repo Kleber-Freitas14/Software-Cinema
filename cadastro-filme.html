@@ -10,15 +10,16 @@
 </head>
 
 <body>
-    <!--INTRODUÇÃO DE BARRA DE MENU, IMAGEM E TEXTO-->
+
+    <!-- MENU -->
     <nav class="navbar navbar-expand-lg bg-black border-bottom border-body" data-bs-theme="dark">
         <div class="container-fluid">
 
-            <a href="" class="navbar-brand">
+            <a href="#" class="navbar-brand">
                 <img src="./img/cinema.svg" alt="" class="d-inline-block align-text-top">
                 SOFTWARE-CINEMA
             </a>
-            <!-- INTRODUÇÃO DSO TÓPICOS NO MENU SANDUICHE-->
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -45,37 +46,45 @@
 
         </div>
     </nav>
-    <div class="container">
-        <h2>Cadastros de Filmes</h2>
+
+    <!-- CONTEÚDO -->
+    <div class="container mt-4">
+        <h2>Cadastro de Filmes</h2>
         <hr>
+
         <div class="row">
             <div class="col-md-4">
                 <input id="titulo" class="form-control" placeholder="Título"><br>
             </div>
             <div class="col-md-4">
-                <input id="genero" class="form-control" placeholder="Gênero"><br>>
+                <input id="genero" class="form-control" placeholder="Gênero"><br>
             </div>
             <div class="col-md-4">
-                <textarea id="descricao" class="form-control"></textarea><br>
+                <textarea id="descricao" class="form-control" placeholder="Descrição"></textarea><br>
             </div>
             <div class="col-md-4">
                 <select id="classificacao" class="form-control">
-                    <option>Livre</option>
-                    <option>18+</option>
+                    <option value="Livre">Livre</option>
+                    <option value="18+">18+</option>
                 </select><br>
             </div>
             <div class="col-md-4">
-                <input id="duracao" type="number" class="form-control" placeholder="Duração do Filme"><br>
+                <input id="duracao" type="number" class="form-control" placeholder="Duração (minutos)"><br>
             </div>
             <div class="col-md-4">
                 <input id="estreia" type="date" class="form-control"><br>
             </div>
         </div>
 
-        <button onclick="salvarFilme()" class="btn btn-primary">Salvar Filme</button>
+        <button type="button" onclick="salvarFilme()" class="btn btn-primary">
+            Salvar Filme
+        </button>
     </div>
 
-    <script src="js/script.js"></script>
-
+    <!-- SCRIPTS -->
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+</html>

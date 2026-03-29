@@ -10,96 +10,73 @@
 </head>
 
 <body>
-    <!--INTRODUÇÃO DE BARRA DE MENU, IMAGEM E TEXTO-->
+
+    <!-- MENU -->
     <nav class="navbar navbar-expand-lg bg-black border-bottom border-body" data-bs-theme="dark">
         <div class="container-fluid">
 
-            <a href="" class="navbar-brand">
-                <img src="./img/cinema.svg" alt="" class="d-inline-block align-text-top">
+            <a href="#" class="navbar-brand">
+                <img src="./img/cinema.svg" alt="">
                 SOFTWARE-CINEMA
             </a>
-            <!-- INTRODUÇÃO DSO TÓPICOS NO MENU SANDUICHE-->
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a href="./cadastro-filme.html" class="nav-link">Cadastro de Filmes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./cadastro-salas.html" class="nav-link">Cadastro das Salas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./cadastro-sessoes.html" class="nav-link">Cadastro das Sessões</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./sessoes.html" class="nav-link">Sessões Disponíveis</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./venda-ingressos.html" class="nav-link">Vendas dos Ingressos</a>
-                    </li>
+                    <li class="nav-item"><a href="./cadastro-filme.html" class="nav-link">Filmes</a></li>
+                    <li class="nav-item"><a href="./cadastro-salas.html" class="nav-link">Salas</a></li>
+                    <li class="nav-item"><a href="./cadastro-sessoes.html" class="nav-link">Sessões</a></li>
+                    <li class="nav-item"><a href="./sessoes.html" class="nav-link">Listagem</a></li>
+                    <li class="nav-item"><a href="./venda-ingressos.html" class="nav-link">Ingressos</a></li>
                 </ul>
             </div>
 
         </div>
     </nav>
-    <div class="container">
-        <h2>Cadastros de Sessões</h2>
+
+    <!-- CONTEÚDO -->
+    <div class="container mt-4">
+        <h2>Cadastro de Sessões</h2>
         <hr>
 
-        <div class="container">
-            <div class="row">
-                <div class="col"></div>
-                <div class="col">
-                    <div class="sessoes">
-                        <select id="filme" class="form-control">
-                            <option value="" disabled selected>Selecione o Filme</option>
-                            <option value="1"> Até o Último Homem</option>
-                            <option value="2">Fury</option>
-                            <option value="3">Sherlock Holmes</option>
-                            <option value="4">Van Helsing</option>
-                            <option value="5">Drácula</option>
-                        </select><br>
-                    </div>
-                    <div class="sessoes">
-                        <select id="sala" class="form-control">
-                            <option>Qual o Tipo da Sala</option>
-                            <option>2D</option>
-                            <option>3D</option>
-                            <option>IMAX</option>
-                        </select><br>
-                    </div>
-                    <div class="sessoes">
-                        <input id="data" type="datetime-local" class="form-control"><br>
-                    </div>
-                    <div class="sessoes">
-                        <input id="preco" type="number" class="form-control" placeholder="Informe o Valor"><br>
-                    </div>
-                    <div class="sessoes">
-                        <select id="idioma" class="form-control">
-                            <option>Informe o Idioma</option>
-                            <option>Dublado</option>
-                            <option>Legendado</option>
-                        </select><br>
-                    </div>
-                    <div class="sessoes">
-                        <select id="formato" class="form-control">
-                            <option>Informe o Tipo do Filme</option>
-                            <option>2D</option>
-                            <option>3D</option>
-                        </select><br>
-                    </div>
-                </div>
-                <div class="col"></div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+
+                <select id="filme" class="form-control"></select><br>
+
+                <select id="sala" class="form-control"></select><br>
+
+                <input id="data" type="datetime-local" class="form-control"><br>
+
+                <input id="preco" type="number" class="form-control" placeholder="Preço"><br>
+
+                <select id="idioma" class="form-control">
+                    <option value="">Selecione o idioma</option>
+                    <option value="Dublado">Dublado</option>
+                    <option value="Legendado">Legendado</option>
+                </select><br>
+
+                <select id="formato" class="form-control">
+                    <option value="">Selecione o formato</option>
+                    <option value="2D">2D</option>
+                    <option value="3D">3D</option>
+                </select><br>
+
+                <button type="button" onclick="salvarSessao()" class="btn btn-primary w-100">
+                    Salvar Sessão
+                </button>
+
             </div>
         </div>
-        <button onclick="salvarSessao()" class="btn btn-primary">Salvar Sessão</button>
-
     </div>
 
-    <script src="js/script.js"></script>
-
+    <!-- SCRIPTS -->
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+</html>
