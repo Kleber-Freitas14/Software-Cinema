@@ -18,7 +18,7 @@
                 <img src="./img/cinema.svg" alt="" class="d-inline-block align-text-top">
                 SOFTWARE-CINEMA
             </a>
-<!-- INTRODUÇÃO DSO TÓPICOS NO MENU SANDUICHE-->
+            <!-- INTRODUÇÃO DSO TÓPICOS NO MENU SANDUICHE-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -48,7 +48,58 @@
     <div class="container">
         <h2>Cadastros de Sessões</h2>
         <hr>
+
+        <div class="container">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                    <div class="sessoes">
+                        <select id="filme" class="form-control">
+                            <option value="" disabled selected>Selecione o Filme</option>
+                            <option value="1"> Até o Último Homem</option>
+                            <option value="2">Fury</option>
+                            <option value="3">Sherlock Holmes</option>
+                            <option value="4">Van Helsing</option>
+                            <option value="5">Drácula</option>
+                        </select><br>
+                    </div>
+                    <div class="sessoes">
+                        <select id="sala" class="form-control">
+                            <option>Qual o Tipo da Sala</option>
+                            <option>2D</option>
+                            <option>3D</option>
+                            <option>IMAX</option>
+                        </select><br>
+                    </div>
+                    <div class="sessoes">
+                        <input id="data" type="datetime-local" class="form-control"><br>
+                    </div>
+                    <div class="sessoes">
+                        <input id="preco" type="number" class="form-control" placeholder="Informe o Valor"><br>
+                    </div>
+                    <div class="sessoes">
+                        <select id="idioma" class="form-control">
+                            <option>Informe o Idioma</option>
+                            <option>Dublado</option>
+                            <option>Legendado</option>
+                        </select><br>
+                    </div>
+                    <div class="sessoes">
+                        <select id="formato" class="form-control">
+                            <option>Informe o Tipo do Filme</option>
+                            <option>2D</option>
+                            <option>3D</option>
+                        </select><br>
+                    </div>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+        <button onclick="salvarSessao()" class="btn btn-primary">Salvar Sessão</button>
+
     </div>
+
+    <script src="js/script.js"></script>
 
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>

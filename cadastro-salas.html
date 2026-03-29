@@ -53,17 +53,30 @@
             <div class="row">
                 <div class="col"></div>
                 <div class="col">
-                    <input id="nomeSala" class="form-control" placeholder="Nome da Sala"></div><br>
-                    <input id="capacidade" class="number" placeholder="Digite a Capacidade da Sala"></div><br>
-
-                    
+                    <div class="sala">
+                        <input id="nomeSala" class="form-control" placeholder="Nome da Sala"><br>
+                    </div>
+                    <div class="sala">
+                        <input id="capacidade" type="number" class="form-control" placeholder="Capacidade da Sala"><br>
+                    </div>
+                    <div class="sala">
+                        <select id="tipoSala" class="form-control" placeholder="Selecione o Tipo da Sala"><br>
+                            <option>2D</option>
+                            <option>3D</option>
+                            <option>IMAX</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="col"></div>
             </div>
+            <button onabort="salvarSala()" class="btn btn-primary">Salvar Sala</button>
+
         </div>
+    </div>
 
 
     </div>
+    <script src="js/script.js"></script>
 
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
