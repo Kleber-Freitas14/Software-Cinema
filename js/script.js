@@ -82,7 +82,7 @@ function salvarSessao() {
     alert("Sessão salva!");
 }
 
-// ===== LISTAGEM =====
+// ===== LISTAGEM (COMPRAR + EXCLUIR) =====
 function listarSessoes() {
     let sessoes = obter('sessoes');
     let filmes = obter('filmes');
@@ -101,12 +101,28 @@ function listarSessoes() {
             <td>${new Date(s.data).toLocaleString()}</td>
             <td>R$ ${parseFloat(s.preco).toFixed(2)}</td>
             <td>
-                <a href="venda-ingressos.html?sessao=${i}" class="btn btn-success">
+                <a href="venda-ingressos.html?sessao=${i}" class="btn btn-success btn-sm">
                     Comprar
                 </a>
+                <button class="btn btn-danger btn-sm" onclick="excluirSessao(${i})">
+                    Excluir
+                </button>
             </td>
         </tr>`;
     });
+}
+
+// ===== EXCLUIR =====
+function excluirSessao(index) {
+    if (confirm("Tem certeza que deseja excluir esta sessão?")) {
+        let sessoes = obter('sessoes');
+
+        sessoes.splice(index, 1);
+
+        salvar('sessoes', sessoes);
+
+        listarSessoes(); // atualiza corretamente
+    }
 }
 
 // ===== VENDA =====
@@ -121,7 +137,7 @@ function carregarSessoesVenda() {
 
     sessoes.forEach((s, i) => {
         select.innerHTML += `<option value="${i}">
-            ${filmes[s.filme]?.titulo} - ${s.data}
+            ${filmes[s.filme]?.titulo} - ${new Date(s.data).toLocaleString()}
         </option>`;
     });
 }
